@@ -1,0 +1,8 @@
+cmake_minimum_required (VERSION 2.6)
+SET(CMAKE_CXX_STANDARD 14)
+SET(COMPILE_FLAGS "-std=c++14 -std=gnu++14 -Wall -flto")
+SET(LINK_FLAGS "-lgtest -lpthread -flto")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}" )
+SET(CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} ${LINK_FLAGS}" )
+project (coin-weight)
+add_executable(coin-weight main.cpp) 
